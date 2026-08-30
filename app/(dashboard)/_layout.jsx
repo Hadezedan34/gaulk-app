@@ -5,6 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import UserOnly from '../../components/auth/UserOnly';
+import { BooksContext, BooksProvider } from '../../contexts/BooksContext';
 const dashboardlayout = () => {
         const colorscheme = useColorScheme()
         const theme = Colors[colorscheme] ?? Colors.dark
@@ -13,7 +14,7 @@ const dashboardlayout = () => {
         
   return (
    
-
+<BooksProvider>
 <UserOnly>
    <Tabs screenOptions={{
                 headerShown: false,
@@ -39,10 +40,13 @@ const dashboardlayout = () => {
                     <Ionicons size={24} name={focused ? "book" : "book-outline" } color={focused ? theme.iconColor :theme.iconColorFocused } />
                 )
                 }}/>
+                 <Tabs.Screen name="bookinfo" options={{href:null, title:'bookDetails'}}
+                
+                />
 
     </Tabs>
 </UserOnly>
-    
+</BooksProvider>
     
 
   

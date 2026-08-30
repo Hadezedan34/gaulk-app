@@ -22,7 +22,7 @@ export const Colors = {
         navBackground: '#1a0447ed',
         iconColor: '#f5f5f5',
         iconColorFocused: '#d4d3e0',
-        uiBackground: '#aeadad',
+        uiBackground: '#351691',
         
     },
 }
